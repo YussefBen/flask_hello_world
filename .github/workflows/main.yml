@@ -12,7 +12,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd  $HOME/site/.ssh
+            cd  $HOME/site/.ssh/authorized_keys
             git clone https://github.com/YussefBen/flask_hello_world.git
             rsync -r ./flask_hello_world/ ./site
             rm -rf ./flask_hello_world
